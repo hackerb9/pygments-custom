@@ -1,9 +1,11 @@
 all: example.pdf
 
-# The Pygments Custom language module uses Environment Variables to
-# add keywords for syntax highlighting. All are optional.
-# Note that this maps strings to subtypes of Token.Keyword.
+# If desired, the base class for this CustomLexer can be changed.
+#export PYGMENTS_CUSTOM_BASE_LEXER  := CppLexer
 
+# This module uses Environment Variables to add keywords for syntax
+# highlighting. All are optional. Note that this maps strings to
+# subtypes of Token.Keyword. (No regular expressions.)
 export PYGMENTS_CUSTOM_TYPE        := [ "vec3", "Atom", "System" ]
 export PYGMENTS_CUSTOM_CONSTANT    := [ 'M_PI', 'Tau' ]
 export PYGMENTS_CUSTOM_KEYWORD     := [ 'xyzzy', 'plugh' ]
